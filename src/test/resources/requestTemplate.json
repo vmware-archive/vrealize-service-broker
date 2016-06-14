@@ -1,0 +1,138 @@
+{
+    "type": "com.vmware.vcac.catalog.domain.request.CatalogItemProvisioningRequest",
+    "catalogItemId": "a3d19350-c15e-4d81-878a-38f4868a4c95",
+    "requestedFor": "Administrator@vra.pcflab.net",
+    "businessGroupId": "f57f9047-daee-47b2-aac9-3f53baa42cf3",
+    "description": null,
+    "reasons": null,
+    "data": {
+        "DB_VM": {
+            "componentTypeId": "com.vmware.csp.component.cafe.composition",
+            "componentId": null,
+            "classId": "Blueprint.Component.Declaration",
+            "typeFilter": "MariaDB*DB_VM",
+            "data": {
+                "_allocation": {
+                    "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                    "componentId": null,
+                    "classId": "Infrastructure.Compute.Machine.Allocation",
+                    "typeFilter": null,
+                    "data": {
+                        "machines": [
+                            {
+                                "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                                "componentId": null,
+                                "classId": "Infrastructure.Compute.Machine.Allocation.Machine",
+                                "typeFilter": null,
+                                "data": {
+                                    "machine_id": "",
+                                    "nics": [
+                                        {
+                                            "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                                            "componentId": null,
+                                            "classId": "Infrastructure.Compute.Machine.Nic",
+                                            "typeFilter": null,
+                                            "data": {
+                                                "address": "",
+                                                "assignment_type": "Static",
+                                                "external_address": "",
+                                                "id": null,
+                                                "load_balancing": null,
+                                                "network": null,
+                                                "network_profile": null
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "_cluster": 1,
+                "_hasChildren": true,
+                "cpu": 1,
+                "datacenter_location": null,
+                "description": null,
+                "disks": [
+                    {
+                        "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                        "componentId": null,
+                        "classId": "Infrastructure.Compute.Machine.MachineDisk",
+                        "typeFilter": null,
+                        "data": {
+                            "capacity": 16,
+                            "custom_properties": null,
+                            "id": 1459562569868,
+                            "initial_location": "",
+                            "is_clone": true,
+                            "label": "Hard disk 1",
+                            "storage_reservation_policy": "",
+                            "userCreated": false,
+                            "volumeId": 0
+                        }
+                    }
+                ],
+                "display_location": false,
+                "guest_customization_specification": "centos7",
+                "max_network_adapters": -1,
+                "max_per_user": 0,
+                "max_volumes": 60,
+                "memory": 2048,
+                "nics": [
+                    {
+                        "componentTypeId": "com.vmware.csp.iaas.blueprint.service",
+                        "componentId": null,
+                        "classId": "Infrastructure.Compute.Machine.Nic",
+                        "typeFilter": null,
+                        "data": {
+                            "address": "",
+                            "assignment_type": "Static",
+                            "external_address": "",
+                            "id": null,
+                            "load_balancing": null,
+                            "network": null,
+                            "network_profile": null
+                        }
+                    }
+                ],
+                "os_arch": "x86_64",
+                "os_distribution": null,
+                "os_type": "Linux",
+                "os_version": null,
+                "property_groups": [
+                    null
+                ],
+                "reservation_policy": null,
+                "security_groups": [],
+                "security_tags": [],
+                "storage": 16
+            }
+        },
+        "MYSQL_DATABASE": {
+            "componentTypeId": "com.vmware.csp.component.cafe.composition",
+            "componentId": null,
+            "classId": "Blueprint.Component.Declaration",
+            "typeFilter": "MariaDB*MYSQL_DATABASE",
+            "data": {
+                "BIND_IP": "",
+                "DB_NAME": "mydb",
+                "DB_PORT": "3306",
+                "DB_ROOT_PASSWORD": "secret",
+                "MYSQL_DOWNLOAD_URL": {
+                    "componentTypeId": "com.vmware.csp.component.software.service",
+                    "componentId": null,
+                    "classId": "artifactDetail",
+                    "typeFilter": null,
+                    "data": {
+                        "url": "http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm"
+                    }
+                },
+                "_hasChildren": false
+            }
+        },
+        "SERVICE_TYPE": "mysql",
+        "_archiveDays": 3,
+        "_leaseDays": 1,
+        "_number_of_instances": 1
+    }
+}
